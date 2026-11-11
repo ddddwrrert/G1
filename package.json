@@ -1,0 +1,56 @@
+{
+  "name": "dsh-evolve-loop",
+  "version": "0.1.0",
+  "description": "Evolutionary search plugin for DeepSeek Harness: the evolve service with swappable providers, evolve_run and the runtime tools, and the Evolve Mode agent preset.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "evolutionary-search",
+    "agent-tools"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "presets",
+    "skills",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml",
+        "./presets/evolve.patch.yml"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-tools": ">=0.1.7-rc.1 <0.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-cordis-host-runner": "0.1.7-rc.1",
+    "@deepseek-ai/dsh-sandbox-local": "0.1.7-rc.1",
+    "@deepseek-ai/dsh-subprocess-local": "0.1.7-rc.1",
+    "@deepseek-ai/dsh-system-prompt": "0.1.7-rc.1",
+    "@deepseek-ai/dsh-tools": "0.1.7-rc.1",
+    "@types/node": "^22.20.0",
+    "vitest": "^4.1.8"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

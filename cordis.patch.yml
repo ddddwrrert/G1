@@ -1,0 +1,4 @@
+# EVOLVE Search plugin: evolve service and evolve_run tool.
+- insert:
+    - id: evolve-loop
+      name: dsh-evolve-loop
